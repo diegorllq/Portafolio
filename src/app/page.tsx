@@ -217,6 +217,125 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* PROYECTOS */}
+      <section
+      id="projects"
+      className="border-t border-white/10  bg-[#101426] px-6 py-24 ">
+
+        <div className="mx-auto max-w-7x1">
+
+          <div className="mb-14">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-violet">
+              Mis proyectos
+            </p>
+
+            <h2 className="text-3x1 font-bold sm:text-4x1">
+              Proyectos Destacados
+            </h2>
+            <p className="mt-4 max-w-2x1 leading 8 text-slate-300">
+              Sección de proyectos tecnologicos en los que he participado,
+              aplicando y expandiendo mis conocimientos para lograr desarrollar
+              Soluciones innovadoras.
+            </p>
+          </div>
+
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+             {/* DEAFCOMM */}
+             <article className="group rounded-2x1 border border-white/10 bg-[#0b1020]-p-6 transition duration-300 hover:translate-y-2 hover:border-violet-400/500 hover:shadow-x1 hover:shadow-violet-500/10">
+              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-violet-500/15 text-2xl">
+              🩺
+              </div>
+             
+             <p className="text-sm font-medium text-violet-400">
+              Salud y accesibilidad
+             </p>
+
+             <h3 className="mt-2 font-bold text-white">
+              Deafcomm
+             </h3>
+             <p className="mt-4 leading-7 text-slate-300">
+              Aplicación diseñada para facilitar la comunicación entre 
+              las personas sordas y el personal médico a través de estimulos visuales y 
+              formularios, contribuyendo a una mejor comprensión y a alcanzar 
+              diágnosticos más acertados.
+             </p>
+
+             <div className="mt-6 border-t border-white/10 pt-4">
+             <p className="text-sm text-slate-400">
+              Presentado en la Hackathon 2024 del
+              Centro ¡Supérate! Fundación Frech 
+             </p>
+             </div>
+             </article>
+
+             {/* SUNERGY */}
+             <article className="group rounded-2x1 border border-white/10 bg-[#0b1020] p-6 transition duration-300 hover:translate-y-2 hover:border-violet-400/500 hover:shadow-x1 hover:shadow-violet-500/10">
+             <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-violet-500/15 text-2xl">
+              ☀️
+             </div>
+
+             <p className="text-sm font-medium text-violet-400">
+              Energía Solar
+             </p>
+
+             <h3 className="mt-2 text-2x1 font bold text-white">
+              Sunergy
+             </h3>
+
+             <p className="mt-4 leading-7 text-slate-300">
+              Aplicación integrada junto con un Arduino y paneles solares
+              en un modelo a escala, que permite supervisar y gestionar desde la app 
+              el consumo de energía electrica proporcionada por 
+              los paneles solares de una manera más inteligente y eficiente. 
+
+             </p>
+
+             <div className="mt-6 border-t border-white/10 pt-4">
+             <p className="text-sm text-slate-400">
+              Proyecto de tecnología y gestión energética
+             </p>
+             </div>
+             </article>
+             
+             {/* SAFEN */}
+             <article className="group rounded-2xl border border-white/10 bg-[#0b1020] p-6 transition duration-300 hover:-translate-y-2 hover:border-violet-400/50 hover:shadow-xl hover:shadow-violet-500/10">
+             <div className="mb-6 flex h12 w-12 items-center justify-center rounded-x1 bg-violet-500/15 text-2x1">
+             🌎
+             </div>
+
+             <p className="text-sm font-medium text-violet-400">
+              Desarrollo web
+             </p>
+             
+             <h3 className="mt-2 text-2xl font-bold text-white">
+                SAFEN
+              </h3>
+               <p className="mt-4 leading-7 text-slate-300">
+                Plataforma web orientada a coordinar y organizar
+                la ayuda destinada a comunidades afectadas por
+                desastres naturales, facilitando la gestión de
+                recursos y la asistencia.
+              </p>
+
+              <div className="mt-6 border-t border-white/10 pt-4">
+                <p className="text-sm text-slate-400">
+                  Proyecto de desarrollo web.
+                </p>
+              </div>
+
+             </article>
+
+          </div>
+
+
+        </div>
+
+      </section>
+      
+
     </main>
   );
 }
