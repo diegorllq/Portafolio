@@ -354,6 +354,16 @@ export default function Home() {
                   <p className="text-sm text-slate-400">
                     Proyecto de desarrollo web.
                   </p>
+                  <a
+                    href="https://github.com/diegorllq/ProyectoSafen"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="mt-6 inline-flex items-center gap-2 rounded-full border border-violet-400/40 px-5 py-2.5 text-sm font-semibold text-violet-300 transition hover:bg-violet-500 hover:text-white"
+                  >
+                  <span>Ver más de safen en GitHub</span>
+                  <span>↗</span>
+                  </a>
+                  
                 </div>
               </div>
             </article>
