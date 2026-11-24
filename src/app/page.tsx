@@ -220,6 +220,7 @@ export default function Home() {
 
       {/* PROYECTOS */}
 
+ 
       {/* PROYECTOS */}
       <section
         id="projects"
@@ -237,9 +238,9 @@ export default function Home() {
             </h2>
 
             <p className="mt-4 max-w-2xl leading-8 text-slate-300">
-              Una selección de proyectos en los que he participado,
-              aplicando mis conocimientos para desarrollar soluciones
-              tecnológicas a diferentes necesidades.
+              Proyectos en los que he aplicado mis conocimientos
+              de informática y tecnología para desarrollar
+              soluciones a diferentes necesidades.
             </p>
           </div>
 
@@ -248,13 +249,17 @@ export default function Home() {
             {/* DEAFCOMM */}
             <article className="group overflow-hidden rounded-2xl border border-white/10 bg-[#0b1020] transition duration-300 hover:-translate-y-2 hover:border-violet-400/50 hover:shadow-xl hover:shadow-violet-500/10">
 
-              <div className="flex h-56 items-center justify-center overflow-hidden bg-[#080d19] p-3">
-               <Image
-                  src="/deafcomm.png"
-                  alt="Interfaz de la aplicación Sunergy"
-                  width={600}
-                  height={1000}
-                  className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
+              <div className="grid h-64 grid-cols-2 gap-2 overflow-hidden bg-[#071629] p-3">
+                <img
+                  src="/deafcomm-inicio-recortada.png"
+                  alt="Pantalla principal de DEAFCOMM"
+                  className="h-full w-full rounded-lg object-contain transition duration-500 group-hover:scale-105"
+                />
+
+                <img
+                  src="/deafcomm-formulario-recortada.png"
+                  alt="Formulario de registro de síntomas de DEAFCOMM"
+                  className="h-full w-full rounded-lg object-contain transition duration-500 group-hover:scale-105"
                 />
               </div>
 
@@ -268,11 +273,28 @@ export default function Home() {
                 </h3>
 
                 <p className="mt-4 leading-7 text-slate-300">
-                  Proyecto que busca facilitar la comunicación
+                  Proyecto desarrollado para facilitar la comunicación
                   entre personas sordas y el personal médico,
-                  contribuyendo a una mejor comprensión de los
-                  síntomas y a alcanzar diagnósticos más acertados.
+                  contribuyendo a una mejor comprensión de los síntomas
+                  y a la obtención de diagnósticos más acertados.
                 </p>
+
+                <div className="mt-6">
+                  <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-slate-400">
+                    Tecnologías utilizadas
+                  </p>
+
+                  <div className="flex flex-wrap gap-2">
+                    {["Power Apps", "SharePoint", "Power Automate"].map((tech) => (
+                      <span
+                        key={tech}
+                        className="rounded-full border border-violet-400/20 bg-violet-400/10 px-3 py-1 text-xs text-violet-200"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
 
                 <div className="mt-6 border-t border-white/10 pt-4">
                   <p className="text-sm text-slate-400">
@@ -286,12 +308,10 @@ export default function Home() {
             {/* SUNERGY */}
             <article className="group overflow-hidden rounded-2xl border border-white/10 bg-[#0b1020] transition duration-300 hover:-translate-y-2 hover:border-violet-400/50 hover:shadow-xl hover:shadow-violet-500/10">
 
-              <div className="flex h-56 items-center justify-center overflow-hidden bg-[#080d19] p-3">
-                <Image
-                  src="/sunergy.jpg"
-                  alt="Interfaz de la aplicación Sunergy"
-                  width={600}
-                  height={1000}
+              <div className="flex h-64 items-center justify-center overflow-hidden bg-white p-3">
+                <img
+                  src="/sunergy-preview.jpg"
+                  alt="Opciones principales de la aplicación Sunergy"
                   className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
                 />
               </div>
@@ -306,16 +326,35 @@ export default function Home() {
                 </h3>
 
                 <p className="mt-4 leading-7 text-slate-300">
-                  Aplicación integrada con Arduino y paneles solares
-                  en una casa a escala, que permite supervisar y
-                  controlar el consumo de energía eléctrica
-                  proporcionada por los paneles para aprovecharla
-                  de manera más eficiente e inteligente.
+                  Aplicación desarrollada para supervisar y gestionar
+                  el consumo de energía eléctrica proporcionada por
+                  paneles solares en una casa a escala, integrando
+                  tecnología para un aprovechamiento más eficiente
+                  e inteligente de la energía.
                 </p>
+
+                <div className="mt-6">
+                  <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-slate-400">
+                    Tecnologías utilizadas
+                  </p>
+
+                  <div className="flex flex-wrap gap-2">
+                    {["Kodular", "Firebase", "Arduino", "Paneles solares"].map((tech) => (
+                      <span
+                        key={tech}
+                        className="rounded-full border border-violet-400/20 bg-violet-400/10 px-3 py-1 text-xs text-violet-200"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
 
                 <div className="mt-6 border-t border-white/10 pt-4">
                   <p className="text-sm text-slate-400">
-                    Proyecto de tecnología y gestión energética.
+                    Proyecto de aplicación móvil y gestión energética
+                    presentada en Expo de logros 2025 del Centro ¡Supérate!
+                    Fundación Frech.
                   </p>
                 </div>
               </div>
@@ -324,12 +363,10 @@ export default function Home() {
             {/* SAFEN */}
             <article className="group overflow-hidden rounded-2xl border border-white/10 bg-[#0b1020] transition duration-300 hover:-translate-y-2 hover:border-violet-400/50 hover:shadow-xl hover:shadow-violet-500/10">
 
-              <div className="flex h-56 items-center justify-center overflow-hidden bg-[#080d19] p-3">
-                <Image
+              <div className="flex h-64 items-center justify-center overflow-hidden bg-white">
+                <img
                   src="/safen.png"
                   alt="Página de bienvenida de la plataforma SAFEN"
-                  width={1000}
-                  height={600}
                   className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
                 />
               </div>
@@ -346,31 +383,44 @@ export default function Home() {
                 <p className="mt-4 leading-7 text-slate-300">
                   Plataforma web orientada a coordinar y organizar
                   la ayuda destinada a comunidades afectadas por
-                  desastres naturales, facilitando la gestión de
-                  recursos y la asistencia.
+                  desastres naturales, conectando a las personas
+                  con profesionales especializados y facilitando
+                  la gestión de asistencia, presentada en la 
+                  Expo Tech 2026 del programa ¡Supérate!
                 </p>
 
-                <div className="mt-6 border-t border-white/10 pt-4">
-                  <p className="text-sm text-slate-400">
-                    Proyecto de desarrollo web.
+                <div className="mt-6">
+                  <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-slate-400">
+                    Tecnologías utilizadas
                   </p>
-                  <a
-                    href="https://github.com/diegorllq/ProyectoSafen"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   className="mt-6 inline-flex items-center gap-2 rounded-full border border-violet-400/40 px-5 py-2.5 text-sm font-semibold text-violet-300 transition hover:bg-violet-500 hover:text-white"
-                  >
-                  <span>Ver más de safen en GitHub</span>
-                  <span>↗</span>
-                  </a>
-                  
+
+                  <div className="flex flex-wrap gap-2">
+                    {["HTML", "CSS", "JavaScript", "PHP", "MySQL", "XAMPP"].map((tech) => (
+                      <span
+                        key={tech}
+                        className="rounded-full border border-violet-400/20 bg-violet-400/10 px-3 py-1 text-xs text-violet-200"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
+
+                <a
+                  href="https://github.com/diegorllq/ProyectoSafen"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex items-center gap-2 rounded-full border border-violet-400/40 px-5 py-2.5 text-sm font-semibold text-violet-300 transition hover:bg-violet-500 hover:text-white"
+                >
+                  Ver más en GitHub ↗
+                </a>
               </div>
             </article>
 
           </div>
         </div>
       </section>
+
 
       
 
