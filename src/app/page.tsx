@@ -1,49 +1,73 @@
 
 import Image from "next/image";
 import Navbar from "./components/navbar";
+import Contact from "./components/contact";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#0b1020] text-white">
       <Navbar />
 
-      <section
-        id="inicio"
-        className="mx-auto flex min-h-[calc(100vh-80px)] max-w-7xl flex-col justify-center px-6 py-24"
+
+<section
+  id="inicio"
+  className="mx-auto grid min-h-[calc(100vh-80px)] max-w-7xl items-center gap-12 px-6 py-20 md:grid-cols-[1.2fr_0.8fr]"
+>
+  {/* PRESENTACIÓN */}
+  <div>
+    <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-violet-400">
+      Bienvenido a mi portafolio
+    </p>
+
+    <h1 className="max-w-4xl text-4xl font-bold tracking-tight sm:text-5xl md:text-7xl">
+      Hola, soy{" "}
+      <span className="text-violet-400">
+        Diego Quintanilla
+      </span>
+    </h1>
+
+    <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+      Estudiante de bachillerato y del Centro ¡Supérate!
+      Fundación Frech que se interesa en áreas como la
+      informática y el inglés, constantemente busca ampliar
+      sus conocimientos y fortalecer sus habilidades al
+      desarrollar soluciones tecnológicas innovadoras.
+    </p>
+
+    <div className="mt-9 flex flex-wrap gap-4">
+      <a
+        href="#projects"
+        className="rounded-full bg-violet-500 px-6 py-3 font-semibold text-white transition hover:bg-violet-400"
       >
-        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-violet-400">
-          Bienvenido a mi portafolio
-        </p>
+        Ver proyectos
+      </a>
 
-        <h1 className="max-w-4xl text-4xl font-bold tracking-tight sm:text-5xl md:text-7xl">
-          Hola, soy {" "}
-          <span className="text-violet-400">
-            Diego Quintanilla
-          </span>
-        </h1>
+      <a
+        href="#contact"
+        className="rounded-full border border-white/20 px-6 py-3 font-semibold text-white transition hover:bg-white/10"
+      >
+        Contactarme
+      </a>
+    </div>
+  </div>
 
-        <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-          Estudiante de bachillerato y del Centro ¡Supérate! Fundación Frech que se interesa
-          en áreas como la informática y el inglés, constantemente busca ampliar sus conocimientos y fortalecer
-          sus habilidades al  desarrollar soluciones tecnológicas innovadoras.
-        </p>
+  {/* FOTOGRAFÍA */}
+  <div className="flex justify-center md:justify-end">
+    <div className="overflow-hidden rounded-3xl border border-violet-400/30 shadow-2xl shadow-violet-500/10">
+      <Image
+        src="/fotoperfil.png"
+        alt="Fotografía profesional de Diego Quintanilla"
+        width={500}
+        height={750}
+        priority
+        className="h-auto w-full max-w-[380px] object-cover"
+      />
+    </div>
+  </div>
+</section>
 
-        <div className="mt-9 flex flex-wrap gap-4">
-          <a
-            href="#projects"
-            className="rounded-full bg-violet-500 px-6 py-3 font-semibold text-white transition hover:bg-violet-400"
-          >
-            Ver proyectos
-          </a>
 
-          <a
-            href="#contact"
-            className="rounded-full border border-white/20 px-6 py-3 font-semibold text-white transition hover:bg-white/10"
-          >
-            Contactarme
-          </a>
-        </div>
-      </section>
+     
 
       <section
         id="about"
@@ -615,10 +639,260 @@ export default function Home() {
               </div>
             </article>
 
+            {/* HOTSPOTS COMERCIALES */}
+            <article className="group overflow-hidden rounded-2xl border border-white/10 bg-[#0b1020] transition duration-300 hover:-translate-y-2 hover:border-violet-400/50 hover:shadow-xl hover:shadow-violet-500/10">
+
+              {/* Mapa del proyecto */}
+              <div className="flex h-56 items-center justify-center overflow-hidden bg-white">
+                <img
+                  src="/hostpost.png"
+                  alt="Mapa interactivo de ubicaciones de cines en la zona oriental de El Salvador"
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+              </div>
+
+              {/* Información del proyecto */}
+              <div className="p-6">
+
+                <p className="text-sm font-medium text-violet-400">
+                  Machine Learning · Análisis geográfico
+                </p>
+
+                <h3 className="mt-2 text-2xl font-bold text-white">
+                  Hotspots Comerciales
+                </h3>
+
+                <p className="mt-4 leading-7 text-slate-300">
+                  Proyecto de Machine Learning para analizar la
+                  distribución geográfica de cines en la zona oriental
+                  de El Salvador. Utiliza K-Means para agrupar
+                  ubicaciones y KNN para estimar el municipio de
+                  nuevas coordenadas, representando los resultados
+                  mediante un mapa interactivo.
+                </p>
+
+                {/* Tecnologías */}
+                <div className="mt-6">
+                  <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-slate-400">
+                    Tecnologías utilizadas
+                  </p>
+
+                  <div className="flex flex-wrap gap-2">
+                    {["Python", "Pandas", "Scikit-learn", "Folium"].map((tech) => (
+                      <span
+                        key={tech}
+                        className="rounded-full border border-violet-400/20 bg-violet-400/10 px-3 py-1 text-xs text-violet-200"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Resultados */}
+                <div className="mt-6 border-t border-white/10 pt-4">
+                  <p className="text-sm text-slate-400">
+                    Resultado: mapa interactivo con dos grupos
+                    geográficos y una ubicación de prueba para KNN.
+                  </p>
+                </div>
+
+              </div>
+            </article>
+
+
  
           </div>
         </div>
       </section>
+
+
+      {/* HABILIDADES */}
+      <section
+        id="skills"
+        className="border-t border-white/10 bg-[#0b1020] px-6 py-24"
+      >
+        <div className="mx-auto max-w-7xl">
+
+          {/* ENCABEZADO */}
+          <div className="mb-14">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-violet-400">
+              Mis conocimientos
+            </p>
+
+            <h2 className="text-3xl font-bold sm:text-4xl">
+              Habilidades
+            </h2>
+
+            <p className="mt-4 max-w-2xl leading-8 text-slate-300">
+              Conocimientos, herramientas y competencias que he adquirido
+              durante mi formación académica y el desarrollo de diferentes
+              proyectos tecnológicos.
+            </p>
+          </div>
+
+          {/* TARJETAS DE HABILIDADES */}
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+            {/* 1. LENGUAJES DE PROGRAMACIÓN */}
+            <div className="rounded-2xl border border-white/10 bg-[#101426] p-6 transition duration-300 hover:-translate-y-1 hover:border-violet-400/50">
+              <h3 className="mb-5 text-xl font-semibold text-white">
+                Lenguajes de programación
+              </h3>
+
+              <div className="flex flex-wrap gap-2">
+                {["Python", "JavaScript", "PHP", "HTML", "CSS"].map((skill) => (
+                  <span
+                    key={skill}
+                    className="rounded-full border border-violet-400/20 bg-violet-400/10 px-3 py-2 text-sm text-violet-200"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* 2. DESARROLLO WEB */}
+            <div className="rounded-2xl border border-white/10 bg-[#101426] p-6 transition duration-300 hover:-translate-y-1 hover:border-violet-400/50">
+              <h3 className="mb-5 text-xl font-semibold text-white">
+                Desarrollo web
+              </h3>
+
+              <div className="flex flex-wrap gap-2">
+                {["React", "Next.js", "TypeScript", "Tailwind CSS"].map((skill) => (
+                  <span
+                    key={skill}
+                    className="rounded-full border border-violet-400/20 bg-violet-400/10 px-3 py-2 text-sm text-violet-200"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* 3. BASES DE DATOS */}
+            <div className="rounded-2xl border border-white/10 bg-[#101426] p-6 transition duration-300 hover:-translate-y-1 hover:border-violet-400/50">
+              <h3 className="mb-5 text-xl font-semibold text-white">
+                Bases de datos
+              </h3>
+
+              <div className="flex flex-wrap gap-2">
+                {["MySQL", "SQLite", "Firebase"].map((skill) => (
+                  <span
+                    key={skill}
+                    className="rounded-full border border-violet-400/20 bg-violet-400/10 px-3 py-2 text-sm text-violet-200"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* 4. HERRAMIENTAS TECNOLÓGICAS */}
+            <div className="rounded-2xl border border-white/10 bg-[#101426] p-6 transition duration-300 hover:-translate-y-1 hover:border-violet-400/50">
+              <h3 className="mb-5 text-xl font-semibold text-white">
+                Herramientas tecnológicas
+              </h3>
+
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Git",
+                  "GitHub",
+                  "VS Code",
+                  "XAMPP",
+                  "Google Colab",
+                  "Power Apps",
+                  "Kodular"
+                ].map((skill) => (
+                  <span
+                    key={skill}
+                    className="rounded-full border border-violet-400/20 bg-violet-400/10 px-3 py-2 text-sm text-violet-200"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* 5. INTELIGENCIA ARTIFICIAL Y MACHINE LEARNING */}
+            <div className="rounded-2xl border border-white/10 bg-[#101426] p-6 transition duration-300 hover:-translate-y-1 hover:border-violet-400/50">
+              <h3 className="mb-5 text-xl font-semibold text-white">
+                IA y Machine Learning
+              </h3>
+
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "K-Means",
+                  "KNN",
+                  "Regresión lineal",
+                  "Pandas",
+                  "NumPy",
+                  "Scikit-learn",
+                  "Matplotlib"
+                ].map((skill) => (
+                  <span
+                    key={skill}
+                    className="rounded-full border border-violet-400/20 bg-violet-400/10 px-3 py-2 text-sm text-violet-200"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* 6. HABILIDADES PERSONALES */}
+            <div className="rounded-2xl border border-white/10 bg-[#101426] p-6 transition duration-300 hover:-translate-y-1 hover:border-violet-400/50">
+              <h3 className="mb-5 text-xl font-semibold text-white">
+                Habilidades personales
+              </h3>
+
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Resolución de problemas",
+                  "Aprendizaje continuo",
+                  "Hablar en público",
+                  "Pensamiento crítico",
+                  "Liderazgo",
+                  "Trabajo en equipo"
+                ].map((skill) => (
+                  <span
+                    key={skill}
+                    className="rounded-full border border-violet-400/20 bg-violet-400/10 px-3 py-2 text-sm text-violet-200"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* 7. IDIOMAS */}
+            <div className="rounded-2xl border border-white/10 bg-[#101426] p-6 transition duration-300 hover:-translate-y-1 hover:border-violet-400/50">
+              <h3 className="mb-5 text-xl font-semibold text-white">
+                Idiomas
+              </h3>
+
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Español · Nativo",
+                  "Inglés · C1"
+                ].map((skill) => (
+                  <span
+                    key={skill}
+                    className="rounded-full border border-violet-400/20 bg-violet-400/10 px-3 py-2 text-sm text-violet-200"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      
+      <Contact />
+
+
     </main>
   );
 }
