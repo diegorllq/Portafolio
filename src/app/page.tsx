@@ -476,6 +476,146 @@ export default function Home() {
                 </div>
               </div>
             </article>
+
+
+            {/* Laberinto */}
+            <article className="group overflow-hidden rounded-2xl border border-white/10 bg-[#0b1020] transition duration-300 hover:-translate-y-2 hover:border-violet-400/50 hover:shadow-xl hover:shadow-violet-500/10">
+
+              <div className="flex h-56 items-center justify-center overflow-hidden bg-white p-4">
+                <img
+                  src="/laberinto.png"
+                  alt="Videojuego de laberinto desarrollado en Python"
+                  className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
+                />
+              </div>
+
+              {/* Información del proyecto */}
+              <div className="p-6">
+
+                <p className="text-sm font-medium text-violet-400">
+                  Algoritmos · Semana 4
+                </p>
+
+                <h3 className="mt-2 text-2xl font-bold text-white">
+                  Laberinto en Python
+                </h3>
+
+                <p className="mt-4 leading-7 text-slate-300">
+                  Desarrollo de un videojuego interactivo que genera
+                  laberintos aleatorios y utiliza árboles de decisión
+                  para explorar diferentes rutas, identificar el
+                  camino más corto y calcular la eficiencia del jugador.
+                </p>
+
+                {/* Tecnologías */}
+                <div className="mt-6">
+                  <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-slate-400">
+                    Tecnologías utilizadas
+                  </p>
+
+                  <div className="flex flex-wrap gap-2">
+                    {["Python", "Tkinter", "SQLite", "Random"].map((tech) => (
+                      <span
+                        key={tech}
+                        className="rounded-full border border-violet-400/20 bg-violet-400/10 px-3 py-1 text-xs text-violet-200"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Resultado */}
+                <div className="mt-6 border-t border-white/10 pt-4">
+                  <p className="text-sm text-slate-400">
+                    Resultado: videojuego funcional con generación
+                    aleatoria de laberintos y búsqueda de rutas.
+                  </p>
+                </div>
+
+              </div>
+            </article>
+            
+            {/* AI CHALLENGE - K-MEANS Y KNN */}
+            <article className="group overflow-hidden rounded-2xl border border-white/10 bg-[#0b1020] transition duration-300 hover:-translate-y-2 hover:border-violet-400/50 hover:shadow-xl hover:shadow-violet-500/10">
+
+              {/* Gráficas de K-Means */}
+              <div className="grid h-56 grid-cols-2 gap-2 overflow-hidden bg-white p-2">
+
+                <div className="flex flex-col items-center justify-center overflow-hidden rounded-lg bg-[#101426]">
+                  <img
+                    src="/kmeans3.png"
+                    alt="Agrupación de estudiantes con K-Means en 3 grupos"
+                    className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
+                  />
+                  <p className="py-2 text-xs font-medium text-white">
+                    K-Means · 3 grupos
+                  </p>
+                </div>
+
+                <div className="flex flex-col items-center justify-center overflow-hidden rounded-lg bg-[#101426]">
+                  <img
+                    src="/kmeans4.png"
+                    alt="Agrupación de estudiantes con K-Means en 4 grupos"
+                    className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
+                  />
+                  <p className="py-2 text-xs font-medium text-white">
+                    K-Means · 4 grupos
+                  </p>
+                </div>
+
+              </div>
+
+              {/* Información del proyecto */}
+              <div className="p-6">
+
+                <p className="text-sm font-medium text-violet-400">
+                  Machine Learning · AI Challenge
+                </p>
+
+                <h3 className="mt-2 text-2xl font-bold text-white">
+                  K-Means y KNN
+                </h3>
+
+                <p className="mt-4 leading-7 text-slate-300">
+                  Desarrollo de un sistema de Machine Learning para
+                  analizar los hábitos académicos de 500 estudiantes.
+                  Utiliza K-Means para agrupar estudiantes según su
+                  rendimiento y KNN para predecir si aprobarán o
+                  reprobarán un examen.
+                </p>
+
+                {/* Tecnologías */}
+                <div className="mt-6">
+                  <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-slate-400">
+                    Tecnologías utilizadas
+                  </p>
+
+                  <div className="flex flex-wrap gap-2">
+                    {["Python", "NumPy", "Pandas", "Matplotlib", "Scikit-learn"].map((tech) => (
+                      <span
+                        key={tech}
+                        className="rounded-full border border-violet-400/20 bg-violet-400/10 px-3 py-1 text-xs text-violet-200"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Resultados */}
+                <div className="mt-6 border-t border-white/10 pt-4">
+                  <p className="text-sm text-slate-400">
+                    Resultados: agrupación en 3 y 4 grupos,
+                    comparación de modelos KNN y predicción
+                    de nuevos estudiantes.
+                  </p>
+                </div>
+
+              </div>
+            </article>
+
+ 
           </div>
         </div>
       </section>
