@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Navbar from "./components/navbar";
 
@@ -6,7 +7,6 @@ export default function Home() {
     <main className="min-h-screen bg-[#0b1020] text-white">
       <Navbar />
 
-     
       <section
         id="inicio"
         className="mx-auto flex min-h-[calc(100vh-80px)] max-w-7xl flex-col justify-center px-6 py-24"
@@ -45,7 +45,6 @@ export default function Home() {
         </div>
       </section>
 
-     
       <section
         id="about"
         className="border-t border-white/10 bg-[#101426] px-6 py-24"
@@ -108,7 +107,6 @@ export default function Home() {
         </div>
       </section>
 
-     
       <section
         id="experience"
         className="border-t border-white/10 bg-[#0b1020] px-6 py-24"
@@ -130,7 +128,6 @@ export default function Home() {
           </div>
 
           <div className="grid gap-12 md:grid-cols-2">
-           
             <div>
               <h3 className="mb-8 text-2xl font-semibold text-white">
                 Formación académica
@@ -219,15 +216,11 @@ export default function Home() {
       </section>
 
       {/* PROYECTOS */}
-
- 
-      {/* PROYECTOS */}
       <section
         id="projects"
         className="border-t border-white/10 bg-[#101426] px-6 py-24"
       >
         <div className="mx-auto max-w-7xl">
-
           <div className="mb-14">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-violet-400">
               Mi trabajo
@@ -245,10 +238,8 @@ export default function Home() {
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-
             {/* DEAFCOMM */}
             <article className="group overflow-hidden rounded-2xl border border-white/10 bg-[#0b1020] transition duration-300 hover:-translate-y-2 hover:border-violet-400/50 hover:shadow-xl hover:shadow-violet-500/10">
-
               <div className="grid h-64 grid-cols-2 gap-2 overflow-hidden bg-[#071629] p-3">
                 <img
                   src="/deafcomm-inicio-recortada.png"
@@ -307,7 +298,6 @@ export default function Home() {
 
             {/* SUNERGY */}
             <article className="group overflow-hidden rounded-2xl border border-white/10 bg-[#0b1020] transition duration-300 hover:-translate-y-2 hover:border-violet-400/50 hover:shadow-xl hover:shadow-violet-500/10">
-
               <div className="flex h-64 items-center justify-center overflow-hidden bg-white p-3">
                 <img
                   src="/sunergy-preview.jpg"
@@ -362,7 +352,6 @@ export default function Home() {
 
             {/* SAFEN */}
             <article className="group overflow-hidden rounded-2xl border border-white/10 bg-[#0b1020] transition duration-300 hover:-translate-y-2 hover:border-violet-400/50 hover:shadow-xl hover:shadow-violet-500/10">
-
               <div className="flex h-64 items-center justify-center overflow-hidden bg-white">
                 <img
                   src="/safen.png"
@@ -417,13 +406,79 @@ export default function Home() {
               </div>
             </article>
 
+            {/* REGRESIÓN LINEAL */}
+            <article className="group overflow-hidden rounded-2xl border border-white/10 bg-[#0b1020] transition duration-300 hover:-translate-y-2 hover:border-violet-400/50 hover:shadow-xl hover:shadow-violet-500/10">
+              {/* Imagen del proyecto */}
+              <div className="flex h-56 items-center justify-center overflow-hidden bg-white p-4">
+                <img
+                  src="/regresionL.png"
+                  alt="Gráfica del modelo de regresión lineal"
+                  className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
+                />
+              </div>
+
+              {/* Información del proyecto */}
+              <div className="p-6">
+                <p className="text-sm font-medium text-violet-400">
+                  Machine Learning · Semana 3
+                </p>
+
+                <h3 className="mt-2 text-2xl font-bold text-white">
+                  Regresión lineal
+                </h3>
+
+                <p className="mt-4 leading-7 text-slate-300">
+                  Desarrollo de un modelo de aprendizaje automático para
+                  analizar la relación entre las horas de estudio y los
+                  resultados obtenidos, permitiendo realizar predicciones
+                  a partir de los datos.
+                </p>
+
+                {/* Tecnologías */}
+                <div className="mt-6">
+                  <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-slate-400">
+                    Tecnologías utilizadas
+                  </p>
+
+                  <div className="flex flex-wrap gap-2">
+                    {["Python", "Pandas", "Scikit-learn", "Matplotlib", "Google Colab"].map((tech) => (
+                      <span
+                        key={tech}
+                        className="rounded-full border border-violet-400/20 bg-violet-400/10 px-3 py-1 text-xs text-violet-200"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Resultado */}
+                <div className="mt-6 border-t border-white/10 pt-5">
+                  <p className="text-sm text-slate-400">
+                    Ejemplo de predicción
+                  </p>
+
+                  <div className="mt-2 flex items-center justify-between">
+                    <div>
+                      <p className="text-xs text-slate-400">
+                        6 horas de estudio
+                      </p>
+
+                      <p className="mt-1 text-2xl font-bold text-violet-400">
+                        SCORE: 5.8
+                      </p>
+                    </div>
+
+                    <div className="rounded-full bg-violet-400/10 p-3">
+                      <span className="text-2xl">📈</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
-
-
-      
-
     </main>
   );
 }
