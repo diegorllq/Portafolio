@@ -49,7 +49,7 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#0b1020]">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4">
 
-        {/* Logotipo */}
+    
         <Link
           href="#inicio"
           className="shrink-0 font-mono text-xl font-bold text-violet-400"
